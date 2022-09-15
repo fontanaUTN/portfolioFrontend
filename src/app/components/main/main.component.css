@@ -1,0 +1,158 @@
+.main {
+	width: 100%;
+	position: relative;
+	top: 0;
+	background-image: url(./../../assets/images/fondo.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 15vw 0;
+	z-index: 100;
+}
+
+#particles-js, #particles-two-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+.main__text {
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-size: 2vw;
+	font-weight: 100;
+}
+
+.main__titles {
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	transition: 2s all ease;
+	margin-block: .5vw;
+}
+
+.main__titles:after {
+	content: '';
+	height: 104%;
+	width: 3px;
+	background: var(--color-white);
+	position: absolute;
+	right: 0;
+	top: -2%;
+	filter: drop-shadow(2px 4px 6px black);
+}
+
+.main__title {
+	color: var(--color-secundary);
+	font-family: var(--font-family-bold);
+	font-size: 4vw;
+	padding-inline: 2vw;
+	white-space: nowrap;
+	transition: 3s all ease;
+}
+
+.main__subtitle {
+	color: var(--color-secundary);
+	font-family: var(--font-family-bold);
+	font-size: 4vw;
+	padding-inline: 2vw;
+	transition: 3s all ease;
+	display: none;
+	white-space: nowrap;
+}
+
+.main__description {
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-size: 1.8vw;
+	font-weight: 100;
+	text-align: center;
+	width: 70%;
+}
+
+.main__download {
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-size: 1.8vw;
+	font-weight: 100;
+	text-align: center;
+	text-decoration: none;
+	padding: 0 2vw;
+	border-radius: 2vw;
+	border: 2.5px solid var(--color-secundary);
+	margin-block: 3vw 0;
+	transition: .4s all ease;
+	position: relative;
+	z-index: 200;
+}
+
+.main__download:after {
+	content: 'Download CV';
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-size: 1.8vw;
+	font-weight: 100;
+	width: 100%;
+	height: 100%;
+	border-radius: 2vw;
+	border: 2.5px solid var(--color-secundary);
+	background: transparent;
+	position: absolute;
+	top: -2.5px;
+	left: -2.5px;
+	z-index: 200;
+}
+
+.main__download:before {
+	content: '';
+	width: 0;
+	height: calc(100% + 2.5px);
+	background: var(--color-secundary);
+	position: absolute;
+	top: -1.25px;
+	left: -1.25px;
+	border-radius: 2vw;
+	transition: .4s all ease;
+	z-index: 100;
+}
+
+.main__download:hover:before {
+	width: calc(100% + 2.5px);
+}
+
+.main__redes {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: .6vw;
+	top: .6vw;
+	z-index: 100;
+}
+
+.main__enlace {
+	display: flex;
+	margin: .6vw;
+}
+
+.main__img {
+	width: 2.2vw;
+	height: auto;
+}
+
+@media screen and (max-width: 750px) {
+	.main__redes { flex-direction: row; bottom: 5px; top: auto; right: 5px; height: max-content; }
+	.main__enlace { margin: 1.6vw; }
+	.main__img { height: 4vw; width: auto; }
+	.main__text { font-size: 3.5vw; }
+	.main__title, .main__subtitle { font-size: 8vw; }
+	.main__description { font-size: 2.7vw; width: 85%; }
+	.main__download, .main__download:after { font-size: 3vw; border-radius: 3vw; }
+}

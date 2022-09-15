@@ -1,0 +1,129 @@
+.message {
+	width: 100%;
+	background: var(--color-primary);
+	padding-block: 0 5vw;
+}
+
+.message__title {
+	color: var(--color-secundary);
+	font-family: var(--font-family-bold);
+	font-size: 2.3vw;
+	text-align: center;
+	margin-block: 0 2vw;
+}
+
+.message__container {
+	display: flex;
+	align-items: center;
+}
+
+.message__form {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin-inline: 10% 5%;
+}
+
+.message__span {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-block: 1vw;
+}
+
+.message__input {
+	width: 45%;
+	padding-inline: 2%;
+	height: 3vw;
+	border: none;
+	outline: none;
+	transition: .5s all ease;
+	transform: translateX(-150%);
+	visibility: hidden;
+}
+
+.message__input:nth-of-type(2) {
+	transition: .3s all ease;
+}
+
+.message__inputs {
+	display: flex;
+	width: 96%;
+	padding-inline: 2%;
+	height: 3vw;
+	border: none;
+	outline: none;
+	transition: .4s all ease;
+	transform: translateX(-120%);
+	visibility: hidden;
+}
+
+.message__textarea {
+	width: 96%;
+	padding: 2%;
+	height: 10vw;
+	margin-block: 1vw;
+	border: none;
+	outline: none;
+	transition: .4s all ease;
+	transform: translateX(-120%);
+	visibility: hidden;
+}
+
+.message__btn {
+	color: var(--color-white);
+	font-family: var(--font-family-bold);
+	font-size: 1.2vw;
+	width: max-content;
+	padding: .3vw 2vw;
+	margin-inline: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	border: none;
+	background: var(--color-secundary);
+	transition: .4s all ease;
+	transform: translateX(400%);
+	visibility: hidden;
+}
+
+.message__contact {
+	display: flex;
+	flex-direction: column;
+	margin-block-end: 4vw;
+}
+
+.message__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	margin-block: .7vw;
+	transition: .7s all ease;
+	visibility: hidden;
+}
+
+.message__ico {
+	width: 2.2vw;
+	margin-block: .2vw 0;
+}
+
+.message__text {
+	color: var(--color-white);
+	font-family: var(--font-family-bold);
+	font-size: 1vw;
+}
+
+@media screen and (max-width: 750px) {
+	.message__container { flex-direction: column; }
+	.message__title { font-size: 3.5vw; }
+	.message__form { width: 85%; margin-inline: auto; }
+	.message__input, .message__inputs { height: 4.5vw; }
+	.message__textarea { height: 20vw; }
+	.message__btn { font-size: 2.8vw; padding: .3vw 5vw; }
+	.message__contact { margin-block: 4vw 0; }
+	.message__link { margin: 1.5vw; }
+	.message__text { font-size: 2vw; }
+	.message__ico { width: 4vw; }
+}

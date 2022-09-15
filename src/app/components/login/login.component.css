@@ -1,0 +1,18 @@
+.login {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding-block: .2vw;
+}
+
+.login__enlace {
+	color: var(--color-text);
+	font-family: var(--font-family-light);
+	font-size: 1vw;
+	text-decoration: none;
+	margin-inline: 1vw;
+}
+
+@media screen and (max-width: 750px) {
+	.login__enlace { font-size: 3vw; margin-inline: 2vw; }
+}

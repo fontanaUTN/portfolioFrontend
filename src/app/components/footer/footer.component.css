@@ -1,0 +1,16 @@
+.footer {
+	width: 100%;
+	padding-block: .8vw;
+	background: var(--color-nav);
+}
+
+.footer__text {
+	color: var(--color-text);
+	font-family: var(--font-family-light);
+	font-size: 1vw;
+	text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+	.footer__text { font-size: 1.8vw; }
+}

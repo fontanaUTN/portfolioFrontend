@@ -1,0 +1,147 @@
+.about {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-block: 10vw;
+	background: var(--color-primary);
+	position: relative;
+}
+
+.about__imgs {
+	margin-inline: 8vw 0;
+	width: 18vw;
+	height: 23vw;
+	border: .8vw solid var(--color-white);
+	visibility: hidden;
+	transition: .4s all ease;
+}
+
+.about__texts {
+	width: 50%;
+	margin-inline: 10%;
+}
+
+.about__title {
+	color: var(--color-secundary);
+	font-family: var(--font-family-bold);
+	font-size: 2.3vw;
+	visibility: hidden;
+	transform: translateY(50%);
+	transition: .5s all ease;
+}
+
+.about__text {
+	color: var(--color-text);
+	font-family: var(--font-family-light);
+	font-size: 1.4vw;
+	font-weight: 100;
+	visibility: hidden;
+	transform: translateY(50%);
+	transition: .5s all ease;
+}
+
+.about__btns {
+	display: flex;
+	margin-block: 2vw 0;
+}
+
+.about__btn {
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-size: 1.4vw;
+	font-weight: 100;
+	text-decoration: none;
+	padding: .2vw 2vw;
+	border-radius: 1.3vw;
+	border: 2px solid var(--color-secundary);
+	background: transparent;
+	position: relative;
+	visibility: hidden;
+	transform: translateY(50%);
+	transition: .4s all ease;
+}
+
+.about__download:after {
+	content: 'Download CV';
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-size: 1.4vw;
+	font-weight: 100;
+	white-space: nowrap;
+	padding: .2vw 2vw;
+	border-radius: 1.3vw;
+	border: 2px solid var(--color-secundary);
+	background: transparent;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	z-index: 200;
+}
+
+.about__download:before {
+	content: '';
+	width: calc(100% + 2.5px);
+	height: calc(100% + 2.5px);
+	background: var(--color-secundary);
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	border-radius: 1.3vw;
+	transition: .5s all ease;
+	z-index: 100;
+}
+
+.about__download:hover:before {
+	width: 0;
+}
+
+.about__portfolio {
+	background: none;
+	margin-inline: 1vw 0;
+	transition: .6s all ease;
+}
+
+.about__portfolio:after {
+	content: 'Portfolio';
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-size: 1.4vw;
+	font-weight: 100;
+	white-space: nowrap;
+	padding: .2vw 2vw;
+	border-radius: 1.3vw;
+	border: 2px solid var(--color-transparent);
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 200;
+}
+
+.about__portfolio:before {
+	content: '';
+	width: 0;
+	height: calc(100% + 2.5px);
+	background: var(--color-secundary);
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	border-radius: 1.3vw;
+	transition: .4s all ease;
+	z-index: 100;
+}
+
+.about__portfolio:hover:before {
+	width: calc(100% + 2.5px);
+}
+
+@media screen and (max-width: 750px) {
+	.about { flex-direction: column; }
+	.about__imgs { margin-inline: 0; width: 30vw; height: 45vw; margin-block: 0 4vw; }
+	.about__texts { width: 90%; margin-inline: 5%; }
+	.about__title { font-size: 3.5vw; text-align: center; }
+	.about__text { font-size: 2.5vw; }
+	.about__btns { justify-content: center; }
+	.about__download, .about__download:after, .about__download:before { font-size: 3vw; border-radius: 3vw; }
+	.about__portfolio, .about__portfolio:after, .about__portfolio:before {  font-size: 3vw; border-radius: 3vw;  }
+}
