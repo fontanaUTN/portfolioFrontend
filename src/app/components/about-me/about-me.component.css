@@ -9,11 +9,18 @@
 
 .about__imgs {
 	margin-inline: 8vw 0;
-	width: 18vw;
-	height: 23vw;
-	border: .8vw solid var(--color-white);
+	width: 20vw;
+	height: auto;
 	visibility: hidden;
 	transition: .4s all ease;
+}
+
+.about__img {
+	width: 100%;
+	height: auto;
+	position: relative;
+	border-top: .4vw solid var(--color-secundary);
+	border-left: .4vw solid var(--color-secundary);
 }
 
 .about__texts {

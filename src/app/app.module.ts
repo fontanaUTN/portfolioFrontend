@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+// Scripts
+import { ChargescriptsService } from './services/chargescripts.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +17,13 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { MessageComponent } from './components/message/message.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { interceptorProvider } from './services/interceptor-service';
+import { NewPortfolioComponent } from './components/portfolio/new-portfolio.component';
+import { EditPortfolioComponent } from './components/portfolio/edit-portfolio.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +35,22 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactComponent,
     PortfolioComponent,
     MessageComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    AdminLoginComponent,
+    NewPortfolioComponent,
+    EditPortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    ChargescriptsService,
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

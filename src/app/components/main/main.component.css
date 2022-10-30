@@ -2,7 +2,7 @@
 	width: 100%;
 	position: relative;
 	top: 0;
-	background-image: url(./../../assets/images/fondo.jpg);
+	background-image: url(/assets/images/fondo.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -54,6 +54,7 @@
 	color: var(--color-secundary);
 	font-family: var(--font-family-bold);
 	font-size: 4vw;
+	text-transform: uppercase;
 	padding-inline: 2vw;
 	white-space: nowrap;
 	transition: 3s all ease;
@@ -63,6 +64,7 @@
 	color: var(--color-secundary);
 	font-family: var(--font-family-bold);
 	font-size: 4vw;
+	text-transform: uppercase;
 	padding-inline: 2vw;
 	transition: 3s all ease;
 	display: none;

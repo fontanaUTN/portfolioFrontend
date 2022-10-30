@@ -1,0 +1,17 @@
+<!-- edit experience -->
+<section class="options">
+    <p class="options__enlace">EDIT</p>
+    <h2 class="options__subtitle">EXPERIENCE</h2>
+</section>
+<!-- Main -->
+<main class="main" *ngIf="expLab">
+    <form class="form" #f="ngForm" (ngSubmit)="onUpload()" novalidate> 
+        <label class="form__lbl" for="nameE">NOMBRE DE LA EXPERIENCA</label>
+        <input class="form__input" type="text" id="nameE" name="nameE" [(ngModel)]="expLab.nameE" required>
+        <label class="form__lbl" for="descriptionE">DESCRIPCION</label>
+        <input class="form__input" type="text" id="descriptionE" name="descriptionE" [(ngModel)]="expLab.descriptionE" required>
+        <label class="form__lbl" for="imageE">IMAGEN URL</label>
+        <input class="form__input" type="text" id="imageE" name="imageE" [(ngModel)]="expLab.imageE" required>
+        <input class="form__submit" type="submit" name="">
+    </form>
+</main>

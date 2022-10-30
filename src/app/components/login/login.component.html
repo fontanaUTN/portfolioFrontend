@@ -1,3 +1,4 @@
 <div class="login"> 
-	<a class="login__enlace" href="#">LOGIN</a>
+	<a class="login__enlace" href="/login" *ngIf="!isLogged">LOGIN</a>
+	<a class="login__enlace" (click)="onLogOut()" *ngIf="isLogged">LOGOUT</a>
 </div>
