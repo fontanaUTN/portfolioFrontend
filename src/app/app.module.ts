@@ -23,6 +23,10 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
 import { interceptorProvider } from './services/interceptor-service';
 import { NewPortfolioComponent } from './components/portfolio/new-portfolio.component';
 import { EditPortfolioComponent } from './components/portfolio/edit-portfolio.component';
+import { EditMainComponent } from './components/main/edit-main.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -39,13 +43,16 @@ import { EditPortfolioComponent } from './components/portfolio/edit-portfolio.co
     HomeComponent,
     AdminLoginComponent,
     NewPortfolioComponent,
-    EditPortfolioComponent
+    EditPortfolioComponent,
+    EditMainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     ChargescriptsService,

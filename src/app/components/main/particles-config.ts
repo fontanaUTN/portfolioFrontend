@@ -4,17 +4,17 @@
           value: 70,
           density: {
             enable: true,
-            value_area: 1400
+            value_area: 800
           }
         },
         color: {
-          value: '#283593'
+          value: '#e0a80d'
         },
         shape: {
           type: 'polygon',
           stroke: {
             width: 1,
-            color: '#283593'
+            color: '#e0a80d'
           },
           polygon: {
             nb_sides: 6
@@ -43,7 +43,7 @@
         line_linked: {
           enable: true,
           distance: 150,
-          color: '#283593',
+          color: '#e0a80d',
           opacity: 1,
           width: 1
         },

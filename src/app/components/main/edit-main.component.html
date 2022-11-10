@@ -1,0 +1,19 @@
+<!-- edit experience -->
+<section class="options">
+    <p class="options__enlace">EDIT</p>
+    <h2 class="options__subtitle">PEOPLE</h2>
+</section>
+<!-- Main -->
+<main class="main" *ngIf="people">
+    <form class="form" #f="ngForm" (ngSubmit)="onUpload()" novalidate> 
+        <label class="form__lbl" for="name">NOMBRE</label>
+        <input class="form__input" type="text" id="name" name="name" [(ngModel)]="people.name" required>
+        <label class="form__lbl" for="lastname">APELLIDO</label>
+        <input class="form__input" type="text" id="lastname" name="lastname" [(ngModel)]="people.lastname" required>
+        <label class="form__lbl" for="description">DESCRIPCION</label>
+        <input class="form__input" type="text" id="description" name="description" [(ngModel)]="people.description" required>
+        <label class="form__lbl" for="img">IMAGEN URL</label>
+        <input class="form__input" type="file" id="img" name="img" [(ngModel)]="people.image" required (change)="uploadImage($event)" accept=".jpg, .png, .jpeg">
+        <input class="form__submit" type="submit" name="">
+    </form>
+</main>

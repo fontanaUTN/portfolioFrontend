@@ -18,10 +18,7 @@
 			<img class="main__img" src="./../../assets/images/redes/telefono.png" alt="">
 		</a>
 	</div>
-	<div class="admin">
-		<a class="admin__enlace" href="#">
-			<img class="admin__img" src="./../../assets/images/admin/add.png" alt="">
-		</a>
+	<div class="admin" *ngIf="isLogged">
 		<a class="admin__enlace" href="#">
 			<img class="admin__img" src="./../../assets/images/admin/edit.png" alt="">
 		</a>

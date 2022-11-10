@@ -1,12 +1,14 @@
 export class people {
     id?: number;
-    name: String;
-    lastname: String;
-    image: String;
+    name: string;
+    lastname: string;
+    description: string;
+    image: string;
 
-    constructor(name: String, lastname: String, image: String){
+    constructor(name: string, lastname: string, description: string, image: string){
         this.name = name;
         this.lastname = lastname;
+        this.description = description;
         this.image = image;
     }
 }

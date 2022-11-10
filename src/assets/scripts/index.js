@@ -1,7 +1,5 @@
 "use strict"
 
-    console.log('fede crack');
-
     const mainTitles = document.querySelector('.main__titles');
     const mainTitle = document.querySelector('.main__title');
     const mainSubtitle = document.querySelector('.main__subtitle');
