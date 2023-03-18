@@ -13,7 +13,10 @@ export const environment = {
     messagingSenderId: '27694538060',
     measurementId: 'G-F18JFWVGYY',
   },
-  production: false
+  production: false,
+
+  URL: 'http://localhost:8080/',
+  // URL: 'https://fontana.herokuapp.com/'
 };
 
 /*

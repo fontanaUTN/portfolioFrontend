@@ -31,8 +31,7 @@ export class AdminLoginComponent implements OnInit {
 
   onLogin():void {
     this.loginUser = new LoginUser(this.nameUser, this.password);
-    this.authService
-      .login(this.loginUser).subscribe(data => {
+    this.authService.login(this.loginUser).subscribe(data => {
         this.isLogged = true;
         this.isLoginFail = false;
         this.tokenService.setToken(data.token);
@@ -43,7 +42,8 @@ export class AdminLoginComponent implements OnInit {
       }, err =>{
         this.isLogged = false;
         this.isLoginFail = true;
-        this.errMsj = err.error.mensaje;
+        this.errMsj = err.mensaje;
+        console.log(err);
         console.log(this.errMsj);
       })
   }

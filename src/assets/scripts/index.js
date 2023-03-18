@@ -135,8 +135,6 @@
     let contactNumberTwo = 0;
     let contactNumberThree = 0;
 
-    console.log(contactText);
-
     const moveContact = () => {
 
         let topContact = contactContainer.getBoundingClientRect().top;
@@ -230,44 +228,6 @@
                     }
                 }, 100)
             }
-        }
-    }
-
-    // Works
-    const worksContainer = document.querySelector('.works');
-    const worksContent = document.querySelectorAll('.works__content');
-
-    let worksNumber = 0;
-    let worksInit = true;
-
-    const moveWorks = () => {
-
-        let topWorks = worksContainer.getBoundingClientRect().top;
-
-        if(topWorks <= window.innerHeight/2){
-            
-            if (worksInit) {
-                let interval = setInterval(function() {
-                    worksContent[worksNumber].style.visibility = 'visible';
-
-                    setTimeout(function(){
-                        worksContent[worksNumber].style.filter = 'drop-shadow(2px 4px 2px black)';
-                        worksNumber += 1;
-                        if (worksNumber >= worksContent.length) {
-                            clearInterval(interval);
-                        }
-                    }, 300)
-
-                }, 800);
-                worksInit = false;
-            }
-        }
-        else{
-            worksContent.forEach((content) => {
-                content.style.visibility = 'hidden';
-            })
-            worksInit = true;
-            worksNumber = 0;
         }
     }
 

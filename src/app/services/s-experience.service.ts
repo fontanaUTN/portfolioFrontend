@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Experience } from '../model/experience';
 
 @Injectable({
@@ -8,13 +9,13 @@ import { Experience } from '../model/experience';
 })
 
 export class SExperienceService {
-  // expURL = 'http://localhost:8080/explab/';
-  expURL = 'https://fontana.herokuapp.com/explab/';
+
+  expURL = environment.URL + 'explab/';
 
   constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<Experience[]> {
-    return this.httpClient.get<Experience[]>(this.expURL + 'lista');
+  public list(): Observable<Experience[]> {
+    return this.httpClient.get<Experience[]>(this.expURL + 'list');
   }
 
   public details(id: number): Observable<Experience> {

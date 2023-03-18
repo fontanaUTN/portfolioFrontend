@@ -7,9 +7,9 @@
 <main class="main">
     <form class="form" #f="ngForm" (ngSubmit)="onLogin()" novalidate> 
         <label class="form__lbl" for="nameUser">USUARIO</label>
-        <input class="form__input" type="email" id="nameUser" name="nameUser" [(ngModel)]="nameUser" required="">
+        <input class="form__input" type="email" id="nameUser" name="nameUser" [(ngModel)]="nameUser" required>
         <label class="form__lbl" for="password">CONTRASEÑA</label>
-        <input class="form__input" type="password" id="password" name="password" [(ngModel)]="password" required="">
-        <input class="form__submit" type="submit" name="">
+        <input class="form__input" type="password" id="password" name="password" [(ngModel)]="password" required>
+        <button class="form__submit" type="submit">ENVIAR</button>
     </form>
 </main>

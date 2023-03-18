@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { people } from '../model/people.model';
 
 @Injectable({
@@ -8,13 +9,16 @@ import { people } from '../model/people.model';
 })
 
 export class PeopleService {
-  // URL = 'http://localhost:8080/people/';
-  URL = 'https://fontana.herokuapp.com/people/';
+  URL = environment.URL + 'people/';
 
   constructor(private httpClient: HttpClient) { }
 
+  public getPeople(): Observable<people> {
+    return this.httpClient.get<people>(this.URL + 'get/profile');
+  }
+
   public lista(): Observable<people[]> {
-    return this.httpClient.get<people[]>(this.URL + 'lista');
+    return this.httpClient.get<people[]>(this.URL + 'list');
   }
 
   public details(id: number): Observable<people> {

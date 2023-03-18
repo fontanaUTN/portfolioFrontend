@@ -13,7 +13,8 @@ declare let particlesJS: any;
 })
 export class MainComponent implements OnInit {
 
-  people: people = null;
+  // people: people = null;
+  people: people = new people("","","","");
   constructor(public peopleService: PeopleService, private tokenService: TokenService) { }
 
   isLogged = false;
@@ -21,6 +22,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.invokeParticles();
     this.chargerPeople();
+    this.peopleService.getPeople().subscribe(data => {this.people = data});
     
     if(this.tokenService.getToken()){
       this.isLogged = true;

@@ -31,7 +31,6 @@
 	transition: .4s all ease;
 	position: relative;
 	cursor: pointer;
-	visibility: hidden;
 }
 
 .works__content:after {
@@ -84,6 +83,7 @@
 .works__action {
 	display: flex;
 	flex-direction: column;
+	text-decoration: none;
 	align-items: center;
 	margin-inline: 1vw;
 	cursor: pointer;
@@ -104,6 +104,7 @@
 	font-family: var(--font-family-light);
 	font-weight: 100;
 	font-size: 1vw;
+	text-decoration: none;
 	padding-block: .2vw 0;
 }
 

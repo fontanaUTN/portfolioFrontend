@@ -7,11 +7,11 @@
 <main class="main">
     <form class="form" #f="ngForm" (ngSubmit)="onCreate()" novalidate> 
         <label class="form__lbl" for="nameE">NOMBRE DE LA EXPERIENCA</label>
-        <input class="form__input" type="text" id="nameE" name="nameE" [(ngModel)]="nameE" required>
+        <input class="form__input" type="text" id="nameE" name="nameE" [(ngModel)]="nameE" placeholder="https://example.com" required>
         <label class="form__lbl" for="descriptionE">DESCRIPCION</label>
-        <input class="form__input" type="text" id="descriptionE" name="descriptionE" [(ngModel)]="descriptionE" required>
+        <input class="form__input" type="text" id="descriptionE" name="descriptionE" [(ngModel)]="descriptionE" placeholder="A simple Web" required>
         <label class="form__lbl" for="imageE">IMAGEN URL</label>
-        <input class="form__input" type="text" id="imageE" name="imageE" [(ngModel)]="imageE" required>
-        <input class="form__submit" type="submit" name="">
+        <input class="form__input" type="text" id="imageE" name="imageE" [(ngModel)]="imageE" placeholder="https://example.com/image.jpg" required>
+        <button class="form__submit" type="submit">ENVIAR</button>
     </form>
 </main>

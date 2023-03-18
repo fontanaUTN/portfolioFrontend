@@ -27,7 +27,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   chargeExperience():void {
-    this.sExperience.lista().subscribe( data => { this.expe = data; });
+    this.sExperience.list().subscribe( data => { this.expe = data; });
   }
 
   delete(id?: number){

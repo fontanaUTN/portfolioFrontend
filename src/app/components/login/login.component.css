@@ -11,6 +11,7 @@
 	font-size: 1vw;
 	text-decoration: none;
 	margin-inline: 1vw;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 750px) {
