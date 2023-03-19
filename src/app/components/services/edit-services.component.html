@@ -1,0 +1,19 @@
+<!-- new service -->
+<section class="options">
+    <p class="options__enlace">EDIT</p>
+    <h2 class="options__subtitle">SERVICE</h2>
+</section>
+<!-- Main -->
+<main class="main" *ngIf="knowledge">
+    <form class="form" #f="ngForm" (ngSubmit)="onUpdate()" novalidate> 
+        <label class="form__lbl" for="nameK">NOMBRE DEL SERVICIO</label>
+        <input class="form__input" type="text" id="nameK" name="nameK" [(ngModel)]="knowledge.nameK" placeholder="Front End" required>
+        <label class="form__lbl" for="descriptionK">DESCRIPCION</label>
+        <input class="form__input" type="text" id="descriptionK" name="descriptionK" [(ngModel)]="knowledge.descriptionK" placeholder="HTML, CSS y javascript" required>
+        <label class="form__lbl" for="imageK">IMAGEN URL</label>
+        <input class="form__input" type="text" id="imageK" name="imageK" [(ngModel)]="knowledge.imageK" placeholder="https://example.com/image.jpg" required>
+        <label class="form__lbl" for="SkillK">HABILIDAD (de 5)</label>
+        <input class="form__input" type="number" id="skillK" name="skillK" [(ngModel)]="knowledge.skillK" placeholder="2" required>
+        <button class="form__submit" type="submit">ENVIAR</button>
+    </form>
+</main>

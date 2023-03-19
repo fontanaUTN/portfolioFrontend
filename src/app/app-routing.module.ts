@@ -5,13 +5,17 @@ import { HomeComponent } from './components/home/home.component';
 import { EditMainComponent } from './components/main/edit-main.component';
 import { EditPortfolioComponent } from './components/portfolio/edit-portfolio.component';
 import { NewPortfolioComponent } from './components/portfolio/new-portfolio.component';
+import { EditServicesComponent } from './components/services/edit-services.component';
+import { NewServicesComponent } from './components/services/new-services.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: AdminLoginComponent },
   { path: 'newportfolio', component: NewPortfolioComponent },
   { path: 'editportfolio/:id', component: EditPortfolioComponent },
-  { path: 'editmain/:id', component: EditMainComponent }
+  { path: 'editmain/:id', component: EditMainComponent },
+  { path: 'newservice', component: NewServicesComponent },
+  { path: 'editservice/:id', component: EditServicesComponent }
 ];
 
 @NgModule({

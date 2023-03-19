@@ -1,6 +1,18 @@
 <section class="services">
 	<h3 class="services__title">Services</h3>
 	<span class="services__container">
+		<span class="services__content" *ngFor="let Knowledge of knowledge">
+			<img class="services__ico" src="{{ Knowledge.imageK }}" alt="{{ Knowledge.nameK }}">
+			<p class="services__subtitle">{{ Knowledge.nameK }}</p>
+			<p class="services__text">{{ Knowledge.descriptionK }}</p>
+			<span class="services__abilities">
+				<img class="services__ability ability" src="./../../assets/images/services/ability.png" alt="ability">
+				<img class="services__ability ability" src="./../../assets/images/services/ability.png" alt="ability">
+				<img class="services__ability ability" src="./../../assets/images/services/ability.png" alt="ability">
+				<img class="services__ability ability" src="./../../assets/images/services/ability.png" alt="ability">
+				<img class="services__ability" src="./../../assets/images/services/ability.png" alt="ability">
+			</span>
+		</span>
 		<span class="services__content">
 			<img class="services__ico" src="./../../assets/images/services/frontend.png" alt="frontend developer">
 			<p class="services__subtitle">Front End</p>

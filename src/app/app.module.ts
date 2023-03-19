@@ -27,6 +27,8 @@ import { EditMainComponent } from './components/main/edit-main.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewServicesComponent } from './components/services/new-services.component';
+import { EditServicesComponent } from './components/services/edit-services.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     AdminLoginComponent,
     NewPortfolioComponent,
     EditPortfolioComponent,
-    EditMainComponent
+    EditMainComponent,
+    NewServicesComponent,
+    EditServicesComponent
   ],
   imports: [
     BrowserModule,
