@@ -28,8 +28,12 @@
 	margin-block-end: 3vw;
 	padding-block: 1vw;
 	filter: drop-shadow(2px 4px 6px black);
-	visibility: hidden;
 	transition: .5s all ease;
+	cursor: pointer;
+}
+
+.services__content:hover {
+	transform: scale(1.08);
 }
 
 .services__ico {
@@ -69,6 +73,37 @@
 .ability {
 	filter: none;
 	transition: .3s all ease;
+}
+/* Admin */
+.services__actions {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 1vw;
+	right: 1vw;
+}
+
+.services__action {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	align-items: center;
+	margin-inline: 1vw;
+	cursor: pointer;
+}
+
+.services__icoadmin {
+	height: 1.8vw;
+	width: auto;
+}
+
+.services__admin {
+	color: var(--color-white);
+	font-family: var(--font-family-light);
+	font-weight: 100;
+	font-size: 1vw;
+	text-decoration: none;
+	padding-block: .2vw 0;
 }
 
 @media screen and (max-width: 750px) {

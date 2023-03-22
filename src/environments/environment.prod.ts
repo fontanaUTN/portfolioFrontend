@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '27694538060',
     measurementId: 'G-F18JFWVGYY',
   },
-  production: true
+  production: true,
+  URL: 'https://portfoliobackend-h27w.onrender.com'
 };

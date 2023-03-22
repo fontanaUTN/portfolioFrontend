@@ -291,10 +291,8 @@
     }
     // All functions
     const allFunctions = () => {
-        moveServices();
         moveAbout();
         moveContact();
-        moveWorks();
         moveMessage();
     }
 
