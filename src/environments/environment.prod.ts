@@ -10,5 +10,5 @@ export const environment = {
     measurementId: 'G-F18JFWVGYY',
   },
   production: true,
-  URL: 'https://portfoliobackend-h27w.onrender.com'
+  URL: 'https://portfoliobackend-h27w.onrender.com/'
 };
