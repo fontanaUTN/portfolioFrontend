@@ -38,7 +38,7 @@
     const aboutContainer = document.querySelector('.about');
     const aboutImg = document.querySelector('.about__imgs');
     const aboutTitle = document.querySelector('.about__title');
-    const aboutText = document.querySelector('.about__text');
+    const aboutTextArr = document.querySelectorAll('.about__text');
     const aboutDownload = document.querySelector('.about__download');
     const aboutPortfolio = document.querySelector('.about__portfolio');
 
@@ -51,8 +51,12 @@
             aboutTitle.style.transform = 'translateY(0)';
             aboutTitle.style.visibility = 'visible';
             setTimeout( function() {
-                aboutText.style.transform = 'translateY(0)';
-                aboutText.style.visibility = 'visible';
+                aboutTextArr.forEach((aboutText) => {
+                    setTimeout(()=> {
+                        aboutText.style.transform = 'translateY(0)';
+                        aboutText.style.visibility = 'visible';
+                    }, 300)
+                });
                 setTimeout(function() {
                     aboutImg.style.visibility = 'visible';
                     setTimeout(function(){
@@ -70,8 +74,10 @@
             aboutImg.style.visibility = 'hidden';
             aboutTitle.style.transform = 'translateY(50%)';
             aboutTitle.style.visibility = 'hidden';
-            aboutText.style.transform = 'translateY(50%)';
-            aboutText.style.visibility = 'hidden';
+            aboutTextArr.forEach((aboutText) => {
+                aboutText.style.transform = 'translateY(50%)';
+                aboutText.style.visibility = 'hidden';
+            })
             aboutDownload.style.transform = 'translateY(50%)';
             aboutDownload.style.visibility = 'hidden';
             aboutPortfolio.style.transform = 'translateY(50%)';

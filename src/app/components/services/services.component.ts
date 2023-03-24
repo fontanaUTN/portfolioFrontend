@@ -10,9 +10,35 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class ServicesComponent implements OnInit {
   knowledge : Knowledge[] = [];
+  Knowledge: any;
 
   constructor(private knowledgeS: KnowledgeService, private tokenService: TokenService) { }
   isLogged = false;
+
+  skill1(skill: string): boolean {
+    if(Number(skill) >= 1) { return true; }
+    else { return false; }
+  }
+
+  skill2(skill: string): boolean {
+    if(Number(skill) >= 2) { return true; }
+    else { return false; }
+  }
+
+  skill3(skill: string): boolean {
+    if(Number(skill) >= 3) { return true; }
+    else { return false; }
+  }
+
+  skill4(skill: string): boolean {
+    if(Number(skill) >= 4) { return true; }
+    else { return false; }
+  }
+
+  skill5(skill: string): boolean {
+    if(Number(skill) >= 5) { return true; }
+    else { return false; }
+  }
 
   ngOnInit(): void {
     this.chargeKnowledge();

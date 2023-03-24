@@ -28,12 +28,28 @@
 	margin-block-end: 3vw;
 	padding-block: 1vw;
 	filter: drop-shadow(2px 4px 6px black);
-	transition: .5s all ease;
+	transition: .3s all ease;
 	cursor: pointer;
+}
+
+.services__content:nth-child(odd) {
+	transform: rotate(2deg);
+}
+
+.services__content:nth-child(even) {
+	transform: rotate(-2deg);
 }
 
 .services__content:hover {
 	transform: scale(1.08);
+}
+
+.services__content:nth-child(odd):hover {
+	transform: scale(1.08) rotate(-2deg);
+}
+
+.services__content:nth-child(even):hover {
+	transform: scale(1.08) rotate(2deg);
 }
 
 .services__ico {

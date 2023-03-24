@@ -29,6 +29,8 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NewServicesComponent } from './components/services/new-services.component';
 import { EditServicesComponent } from './components/services/edit-services.component';
+import { EditAboutMeComponent } from './components/about-me/edit-about-me.component';
+import { NewAboutMeComponent } from './components/about-me/new-about-me.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { EditServicesComponent } from './components/services/edit-services.compo
     EditPortfolioComponent,
     EditMainComponent,
     NewServicesComponent,
-    EditServicesComponent
+    EditServicesComponent,
+    EditAboutMeComponent,
+    NewAboutMeComponent
   ],
   imports: [
     BrowserModule,

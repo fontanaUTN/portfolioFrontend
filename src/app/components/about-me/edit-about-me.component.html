@@ -1,0 +1,14 @@
+<!-- new service -->
+<section class="options">
+    <p class="options__enlace">EDIT</p>
+    <h2 class="options__subtitle">ABOUT ME</h2>
+</section>
+<!-- Main -->
+<main class="main" *ngIf="about">
+    <form class="form" #f="ngForm" (ngSubmit)="onUpdate()" novalidate> 
+        <label class="form__lbl" for="text">PARRAFO</label>
+        <input class="form__input" type="text" id="text" name="text" [(ngModel)]="about.text" placeholder="This is ..." required>
+        <input class="form__input" type="hidden" id="extra" name="extra" [(ngModel)]="about.extra" placeholder="This is ..." required>
+        <button class="form__submit" type="submit">ENVIAR</button>
+    </form>
+</main>

@@ -1,13 +1,30 @@
-<section class="about">
+<section class="about" id="about">
 	<span class="about__imgs">
-		<img class="about__img" src="/assets/images/about-me/image.jpg">
+		<img class="about__img" src="{{ people.image }}">
 	</span>
 	<span class="about__texts">
 		<h3 class="about__title">About Me</h3>
-		<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br><br>	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<span class="admin__container" *ngFor="let About of about">
+			<p class="about__text">{{ About.text }}</p>
+			<span class="admin__actions">
+				<a class="admin__action" routerLink="/editabout/{{ About.id }}" title="edit" *ngIf="isLogged">
+					<img class="admin__ico" src="./../../assets/images/admin/edit.png" alt="">
+					<p class="admin__admin">edit</p>
+				</a> 
+				<a class="admin__action" (click)="delete(About.id)" title="delete" *ngIf="isLogged">
+					<img class="admin__ico" src="./../../assets/images/admin/delete.png" alt="">
+					<p class="admin__admin">delete</p>
+				</a>
+			</span>
+		</span>
 		<span class="about__btns">
 			<a class="about__btn about__download" href="">Download  CV</a>
-			<a class="about__btn about__portfolio" href="">Portfolio</a>
+			<a class="about__btn about__portfolio" href="#portfolio">Portfolio</a>
 		</span>
 	</span>
+	<div class="admin">
+		<a class="admin__enlace" routerLink="/newabout" *ngIf="isLogged">
+			<img class="admin__img" src="./../../assets/images/admin/add.png" alt="">
+		</a>
+	</div>
 </section>

@@ -38,6 +38,6 @@ export class MainComponent implements OnInit {
 
   public chargerPeople(){
     this.peopleService.details(1).subscribe((data) => { this.people = data })
-  }
+  } 
  
 }

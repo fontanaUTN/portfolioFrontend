@@ -35,6 +35,7 @@ export class EditMainComponent implements OnInit {
     this.people.image = this.imageService.url;
     this.peopleService.update(id, this.people).subscribe(
       data => {
+        alert("error al modificar");
         this.router.navigate(['']);
       }, err => {
         alert("error al modificar");
