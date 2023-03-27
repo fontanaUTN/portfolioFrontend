@@ -10,7 +10,7 @@ export const environment = {
     measurementId: 'G-F18JFWVGYY',
   },
   production: false,
-  URL: 'http://localhost:8080/'
+  // URL: 'http://localhost:8080/'
   // URL: 'https://portfoliobackend-h27w.onrender.com/'
-  // URL: 'https://portfoliobackend-production-b40d.up.railway.app/'
+  URL: 'portfoliobackend-production-319c.up.railway.app'
 };
