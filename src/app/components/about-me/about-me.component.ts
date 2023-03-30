@@ -20,7 +20,7 @@ export class AboutMeComponent implements OnInit {
 
   ngOnInit(): void {
     this.chargerPeople();
-    this.peopleService.getPeople().subscribe(data => {this.people = data});
+    // this.peopleService.getPeople().subscribe(data => {this.people = data});
     this.chargeAbout();
     
     if(this.tokenService.getToken()){

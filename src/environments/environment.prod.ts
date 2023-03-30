@@ -12,5 +12,5 @@ export const environment = {
   production: false,
   // URL: 'http://localhost:8080/'
   // URL: 'https://portfoliobackend-h27w.onrender.com/'
-  URL: 'portfoliobackend-production-319c.up.railway.app'
+  URL: 'https://portfoliobackend-production-319c.up.railway.app/'
 };

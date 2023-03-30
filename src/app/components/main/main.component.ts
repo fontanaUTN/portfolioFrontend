@@ -22,7 +22,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.invokeParticles();
     this.chargerPeople();
-    this.peopleService.getPeople().subscribe(data => {this.people = data});
+    // this.peopleService.getPeople().subscribe(data => {this.people = data});
     
     if(this.tokenService.getToken()){
       this.isLogged = true;

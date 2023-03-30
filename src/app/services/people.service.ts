@@ -13,9 +13,9 @@ export class PeopleService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getPeople(): Observable<people> {
-    return this.httpClient.get<people>(this.URL + 'get/profile');
-  }
+  // public getPeople(): Observable<people> {
+  //   return this.httpClient.get<people>(this.URL + 'get/profile');
+  // }
 
   public lista(): Observable<people[]> {
     return this.httpClient.get<people[]>(this.URL + 'list');
