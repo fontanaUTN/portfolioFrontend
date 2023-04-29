@@ -32,6 +32,8 @@ import { EditServicesComponent } from './components/services/edit-services.compo
 import { EditAboutMeComponent } from './components/about-me/edit-about-me.component';
 import { NewAboutMeComponent } from './components/about-me/new-about-me.component';
 
+import { CorsModule } from 'cors';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,10 @@ import { NewAboutMeComponent } from './components/about-me/new-about-me.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CorsModule.forRoot({
+      origin: 'https://fontana.progresodigital.net' // Reemplaza con el origen permitido
+    })
   ],
   providers: [
     ChargescriptsService,
