@@ -64,10 +64,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portfolioFrontend:build:production"
+              "browserTarget": "portfolioFrontend:build:production",
+              "proxyConfig": "proxy.conf.json"
             },
             "development": {
-              "browserTarget": "portfolioFrontend:build:development"
+              "browserTarget": "portfolioFrontend:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

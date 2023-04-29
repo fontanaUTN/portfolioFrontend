@@ -1,0 +1,7 @@
+{
+    "/*": {
+      "target": "https://fontana.progresodigital.net",
+      "secure": true,
+      "logLevel": "debug"
+    }
+}
