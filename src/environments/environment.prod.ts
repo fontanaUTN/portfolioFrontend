@@ -10,7 +10,7 @@ export const environment = {
     measurementId: 'G-F18JFWVGYY',
   },
   production: false,
-  // URL: 'http://localhost:8080/'
+  URL: 'http://localhost:8080/'
   // URL: 'https://portfoliobackend-h27w.onrender.com/'
-  URL: 'https://fontana.progresodigital.net/'
+  // URL: 'https://fontana.progresodigital.net/'
 };
