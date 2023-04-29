@@ -12,5 +12,5 @@ export const environment = {
   production: false,
   // URL: 'http://localhost:8080/'
   // URL: 'https://portfoliobackend-h27w.onrender.com/'
-  URL: 'https://portfoliobackend-production-319c.up.railway.app/'
+  URL: 'http://fontana.progresodigital.net/'
 };

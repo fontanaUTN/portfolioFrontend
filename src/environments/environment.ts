@@ -10,7 +10,7 @@ export const environment = {
     measurementId: 'G-F18JFWVGYY',
   },
   production: false,
-  URL: 'http://localhost:8080/'
+  URL: 'http://fontana.progresodigital.net/'
 };
 
 /*
