@@ -9,7 +9,7 @@ import { About } from '../model/about';
 })
 export class AboutService {
 
-  expURL = 'about/';
+  expURL = environment.URL + 'about/';
 
   constructor(private httpClient: HttpClient) { }
 
